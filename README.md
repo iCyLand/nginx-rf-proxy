@@ -11,7 +11,7 @@
 
 ## Referrence
 
-* socat and reverse proxy example 
+* socat and reverse proxy example
   * <https://stackoverflow.com/questions/46803431/nginx-proxy-pass-over-https-proxy>
 
 * nginx docker environment inspiration
