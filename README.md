@@ -2,12 +2,12 @@
 
 ## Environment variable
 
-* NGX_FPROXY_HOST
-* NGX_FPROXY_PORT
-* NGX_FPROXY_RESOLVER_IP
-* NGX_FPROXY_DEST_HOST
-* NGX_FPROXY_DEST_PROTO
-* NGX_FPROXY_DEST_PORT
+* NGX_FPROXY_HOST is proxy server address
+* NGX_FPROXY_PORT is proxy server port
+* NGX_FPROXY_RESOLVER_IP is public or internal DNS server
+* NGX_FPROXY_DEST_HOST is destination domain or ip address
+* NGX_FPROXY_DEST_PROTO is destination protocol [http|https]
+* NGX_FPROXY_DEST_PORT is destination port 80, 443 or etc.
 
 ## Referrence
 
