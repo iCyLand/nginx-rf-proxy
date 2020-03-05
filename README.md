@@ -1,0 +1,10 @@
+# Setting for NGINX reverse to forward proxy
+
+## Environment variable
+
+* NGX_FPROXY_HOST
+* NGX_FPROXY_PORT
+* NGX_FPROXY_RESOLVER_IP
+* NGX_FPROXY_DEST_HOST
+* NGX_FPROXY_DEST_PROTO
+* NGX_FPROXY_DEST_PORT

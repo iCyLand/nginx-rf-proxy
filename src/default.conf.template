@@ -1,0 +1,22 @@
+proxy_buffer_size 128k;
+proxy_buffers 4 256k;
+proxy_busy_buffers_size 256k;
+proxy_connect_timeout 20;
+proxy_read_timeout 40;
+large_client_header_buffers 8 64k;
+client_max_body_size 128m;
+resolver ${NGX_FPROXY_RESOLVER_IP};
+
+server{
+  listen 80 default_server;
+  server_name _;
+
+  location / {
+    proxy_pass $NGX_FPROXY_DEST_PROTO://127.0.0.1:8080;
+
+    proxy_set_header Host ${NGX_FPROXY_DEST_HOST};
+    proxy_set_header X-Forwarded-For ${DOLLAR}proxy_add_x_forwarded_for;
+    proxy_set_header Referer ${DOLLAR}http_referer;
+    proxy_redirect off;
+  }
+}
